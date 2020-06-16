@@ -1,0 +1,9 @@
+-knowledge_base.zip: 	contains the object attributes and environments. The objects from the Washington RGB-D dataset are organised into objects visual descriptions: materials, shape, texture, and object category classes. The 7 environments from the MIT scene dataset used in this framework are in the environment folder.
+
+-learned_attributes.zip: 	contains the learned DCNN models for the 70% of the dataset. The training and test subsets are in the model. These files were created using MATLAB.
+
+-synthetic_data.zip: 	contains the clean point cloud data of the objects used in testing environment for the grasping action. The files are .ply to be input into the graspit module.
+
+-filtered_data.zip: 	contains the figure-eight collected data filtered after analysis of the contributor responses.
+
+-grasps_regions.zip: 	contains the semantic grasping labels of the Washington dataset used for training, testing and validation. Inside each shape context there is a folder named PixelLabelledData that contains: label images, a *_train.txt with the names of the original d-RGB images used for the training from the Washington database as well as the already trained model in a *.mat file.

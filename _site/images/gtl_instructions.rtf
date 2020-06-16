@@ -1,0 +1,19 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 The dataset from Robot Learning Lab contains five types of files:\
+           - Image files: these files come in .png format and are the original images of the objects.\
+\
+            -Point cloud files: they come in .txt format representing the PCD v.7 point cloud data. Each uncommented line in the .txt file line represents a pixel in the corresponding .png file. In the .txt file, the final column in each line is labelled ``index'' and has the row and column number of each pixel. In all of the.png images, there are 640 columns and 480 rows. They give the following equation to map the point cloud .PCD to the image .png:\
+                        row =floor(index / 640) + 1 \
+                        col = index( mod 640) + 1\
+                                \
+             -Hand labeled grasping rectangles: they are .txt files containing four lines for each rectangle. Each line contains the x and y coordinate of a vertex of that rectangle separated by a space. Vertices are listed in counter-clockwise order.\
+                    \
+              -Background image files: they are in .png format and are images of the background of the objects when the data was collected.\
+\
+              -The background mapping files: contain one line for each image in the  dataset, giving the image name and the name of the corresponding background image separated by a space. This is useful to subtract the background from the object.}

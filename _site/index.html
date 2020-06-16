@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- OPTIONAL: description -->
+    <meta name="description" content="">
+    <!-- OPTIONAL: author -->
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icon.png" />
+
+		<!-- EDIT: title -->
+    <title>Object Handover</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Link the main.css stylesheet -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- OPTIONAL: Google Fonts (don't forget to edit main.css also) -->
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <style>
+      input.larger {
+        zoom: 1.3;
+        transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+        function random_3(){
+          var myrandom=Math.round(Math.random()*2)
+          var link1="https://docs.google.com/forms/d/e/1FAIpQLSf9jsIckleW_pDUWDlBjeDlDhjSvgxp2guvb9CMEeZ-EaTEyA/viewform?embedded=true"
+          var link2="https://docs.google.com/forms/d/e/1FAIpQLSec7xqlxEEUnM_NCOEDIwUI82WeVg8i6_xqyirln8oAyr3JaA/viewform?embedded=true"
+          var link3="https://docs.google.com/forms/d/e/1FAIpQLSf9eWV1waIn5uBtylBCvdpplrs_uDZtT8DuU8n30Cb1fk6HzQ/viewform?embedded=true"
+          if (myrandom==0)
+              window.location=link1
+          else if (myrandom==1)
+              window.location=link2
+          else if (myrandom==2)
+              window.location=link3
+        }
+    </script>
+
+
+
+
+  	<div id="header" class="header">
+  		<div class="container">
+  			<div class="row centered">
+          <h1 style="text-align:center"> Robot to human object handover</h1>
+
+            <!-- <div class="col-lg-12"> -->
+              <p style="text-align:left"> We invite you to collaborate with us on identifying useful techniques for our robot PR2 to hand over objects to humans. We will present you with 3 different scenarios and ask you to rate them. The following animations are scaled to real world measurements. These are the interaction partners you will see: </p>
+
+                <img src="/images/scales_for_survey.png" style="width:480px;">
+
+              <p style="text-align:left"><strong>Time Commintment:</strong> approx 20 min</p>
+              <p style="text-align:left"><strong>Risks and Benefits:</strong> There are no known risks or benefits for you in this study.</p>
+              <p style="text-align:left"><strong>Participant's rights:</strong> You may decide to stop being a part of the research study at any time without explanation. You have the right to ask that any data you have supplied to that point be withdrawn.</p>
+              <p style="text-align:left"><strong>Risks and Benefits:</strong> In compliance with the Data Protection Act and Freedom of Information Act and GDPR, the data we collect will not maintain any personally identifiable information about you.
+                                                                              No-one will link the data you provide to any identifying information you may supply. Participants will be assigned a code instead of their name to protect their identity.
+                                                                              Data will be used for research outputs such as articles and conference presentations.</p>
+              <p style="text-align:left"><input type="checkbox" class="larger" id="checkme"/> &emsp; By checking this box, you are agreeing that: You have read and understood the participant information and consent. You understand that there are no expected potential risks to you in your participation. You are taking part in this research without coercion.
+                                                                              You consent for any personal data collected to be used as part of this study.</p>
+              <!-- <input type="checkbox" id="checkme"/> -->
+              <input type="submit" name="sendNewSms" class="inputButton" id="sendNewSms" disabled="true" value=" START SURVEY " onClick="random_3()" />
+
+  			<!--/.row -->
+  		</div><!--/.container -->
+  	</div><!--/.header -->
+
+    <script type="text/javascript">
+        var checker = document.getElementById('checkme');
+        var sendbtn = document.getElementById('sendNewSms');
+        checker.onchange = function() {
+          sendbtn.disabled = !this.checked;
+        };
+    </script>
+
+  </body>
+</html>
